@@ -1,0 +1,17 @@
+type Person {
+    id : ID,
+    name : String,
+    age : Int,
+    gender :Gender
+}
+
+enum Gender{
+    MALE , FEMALE
+}
+
+input CreatePersonInput
+{
+    name: String,
+    age: Int,
+    gender: Gender
+}
