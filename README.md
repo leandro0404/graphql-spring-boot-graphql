@@ -1,1 +1,1 @@
-# graphql-spring-boot-graphql
+# graphql-spring-boot-kotlin
