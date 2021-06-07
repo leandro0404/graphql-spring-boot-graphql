@@ -3,7 +3,6 @@ package leandro.personapi.resolver
 import com.coxautodev.graphql.tools.GraphQLMutationResolver
 import com.coxautodev.graphql.tools.GraphQLQueryResolver
 import leandro.personapi.input.CreatePersonInput
-import leandro.personapi.model.Gender
 import leandro.personapi.model.Person
 import leandro.personapi.repository.PersonRepository
 import org.springframework.stereotype.Component

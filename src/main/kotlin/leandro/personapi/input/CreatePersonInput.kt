@@ -7,13 +7,13 @@ import lombok.Setter
 
 @Getter
 @Setter
-class CreatePersonInput (name : String, age: Int , gender: Gender ) : GraphQLInputType {
+class CreatePersonInput(name: String, age: Int, gender: Gender) : GraphQLInputType {
 
     override fun getName(): String {
         return name
     }
+
     private var name = name
     var age = age
-    var gender = gender
-
+    var gender = gend
 }
