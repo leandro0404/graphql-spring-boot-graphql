@@ -15,5 +15,5 @@ class CreatePersonInput(name: String, age: Int, gender: Gender) : GraphQLInputTy
 
     private var name = name
     var age = age
-    var gender = gend
+    var gender = gender
 }
