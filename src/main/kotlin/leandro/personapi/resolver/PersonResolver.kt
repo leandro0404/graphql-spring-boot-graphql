@@ -16,7 +16,7 @@ class PersonResolver (private val  repository: PersonRepository) : GraphQLQueryR
 
     fun savePerson(person : CreatePersonInput): Person
     {
-        var person =  Person(null,person.name, person.age ,person.gender);
+        var person =  Person(person.name, person.age ,person.gender );
         return repository.save(person);
     }
 }

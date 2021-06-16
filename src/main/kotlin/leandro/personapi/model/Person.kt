@@ -1,20 +1,32 @@
 package leandro.personapi.model
 
-import javax.persistence.Entity
-import javax.persistence.GeneratedValue
-import javax.persistence.GenerationType
-import javax.persistence.Id
+import lombok.Data
+import lombok.NoArgsConstructor
+import javax.persistence.*
 
+@Data
+@NoArgsConstructor
 @Entity
-data class Person(
+@Table(name = "person")
+class Person(
+    @field:Column(name = "Name") private val name: String,
+    @field:Column(name = "Age") private val age: Int,
+    gender: Gender
+) {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private val id: Long = 0
 
-    @Id  @GeneratedValue(strategy = GenerationType.AUTO) val id: Long? = null,
-    var name: String,
-    var age : Int,
-    var gender: Gender
-)
-{
+    @Enumerated(EnumType.STRING)
+    @Column(name = "Gender")
+    private val gender: Gender
 
+    @OneToMany(mappedBy = "owner")
+    private val documents: Collection<Document>? = null
+
+    init {
+        this.gender = gender
+    }
 }
 
 enum class Gender {

@@ -1,4 +1,5 @@
 type Mutation
 {
     savePerson(person : CreatePersonInput) :Person
+    saveDocument (document: DocumentInput ) : Document
 }
